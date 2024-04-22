@@ -21,83 +21,54 @@
   
 }
 
-/* Responsive classes for different screen sizes */
-@media (max-width: 1225px) {
-  /* For mq1225 screens */
-  .main-container {
-    overflow: hidden;
-  }
 
-  .main-container,
-  .main-container * {
-    box-sizing: border-box;
-  }
-
-  input,
-  select,
-  textarea,
-  button {
-    outline: 0;
-  }
-}
-
-@media (max-width: 1050px) {
-  /* For mq1050 screens */
-  .main-container {
-    overflow: hidden;
-  }
-
-  .main-container,
-  .main-container * {
-    box-sizing: border-box;
-  }
-
-  input,
-  select,
-  textarea,
-  button {
-    outline: 0;
-  }
-}
-
-@media (max-width: 750px) {
-  /* For mq750 screens */
-  .main-container {
-    overflow: hidden;
-  }
-
-  .main-container,
-  .main-container * {
-    box-sizing: border-box;
-  }
-
-  input,
-  select,
-  textarea,
-  button {
-    outline: 0;
-  }
-}
-
-@media (max-width: 450px) {
-  /* For mq450 screens */
-  .main-container {
-    overflow: hidden;
-  }
-
-  .main-container,
-  .main-container * {
-    box-sizing: border-box;
-  }
-
-  input,
-  select,
-  textarea,
-  button {
-    outline: 0;
-  }
-}
 
 * {
   scroll-behavior: smooth;
 }
+
+/* For screens smaller than 1225px */
+@media screen and (max-width: 1225px) {
+  .main-container {
+    width: 100%;
+  }
+}
+
+/* For screens smaller than 1050px */
+@media screen and (max-width: 1050px) {
+  .navbar,
+  .content-section {
+    width: 100%;
+  }
+}
+
+/* For screens smaller than 750px */
+@media screen and (max-width: 750px) {
+  .navbar,
+  .content-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* For screens smaller than 450px */
+@media screen and (max-width: 450px) {
+  .navbar,
+  .content-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  /* Styling for the dropdown: */
+  
+}
+
+.dropdown-content.show {
+  display: block; 
+}
+

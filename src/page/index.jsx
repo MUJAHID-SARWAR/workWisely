@@ -1,40 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
 import Marquee from "react-fast-marquee";
 
 export default function Main() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
+
+
+  const toggleOpen = () => setIsOpen(!isOpen);
+  const toggleOpen2 = () => setIsOpen2(!isOpen2);
+  const toggleOpen3 = () => setIsOpen3(!isOpen3);
+
+  
+
+
   return (
     <div className="main-container grid w-[1440px] h-[3644px] bg-[#fff] relative md:overflow-hidden md:box-border mx-auto my-0 mq1225:w-full mq1050:w-full mq750:w-full mq450:w-full">
-      <div className="w-[1290px] self-stretch  overflow-hidden h-[50px] grid md:overflow-hidden md:box-border cursor-pointer  relative z-[185] mt-[28px] mr-0 mb-0 ml-[75px]">
-  <div className="w-[187px] h-[50px] bg-[#e7af38] rounded-[8px] absolute top-0 left-[1103px] z-[74]">
-    <a href="#join" className="flex h-[30px] justify-start items-start font-['Poppins'] text-[20px] font-semibold leading-[30px] text-[#fff] absolute top-[10px] left-[48px] text-left whitespace-nowrap z-[75]">
-      Join now
-    </a>
-  </div>
-  <span className="flex h-[36px] justify-start items-start font-['Poppins'] text-[24px] font-semibold leading-[36px] text-[#241e1e] absolute top-[7px] left-0 text-left whitespace-nowrap z-[26]">
-    WorkWisely
-  </span>
-  <div className="flex w-[386px] h-[30px] gap-[30px] items-start flex-nowrap absolute top-[10px] left-1/2 translate-x-[-49.87%] translate-y-0 z-[27]">
-    <button className="w-[61px] h-[30px] shrink-0 font-['Poppins'] text-[20px] font-bold leading-[30px] text-[#241e1e] border-none relative whitespace-nowrap z-[28] pointer" />
-    <div className="flex-1 flex flex-col items-start justify-start text-2xl py-0 pr-[5.5px] pl-0">
-      <b className="relative capitalize inline-block min-w-[61px] home">
-        <a href="#home">Home</a>
-      </b>
-    </div>
-    <a id="contact" href="#contact" className="h-[30px] shrink-0 basis-auto font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-[29]">
-      Contact
-    </a>
-    <a id="about" href="#about" className="h-[30px] shrink-0 basis-auto font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-30">
-      About Us
-    </a>
-    <a id="signIn" href="#signIn" className="h-[30px] shrink-0 basis-auto font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-[31]">
-      Sign In
-    </a>
-  </div>
-  <div className="w-[72px] h-[3px] bg-[url(../assets/images/dbd17d50-b2a8-415c-bc5b-2ee692859aff.png)] bg-cover bg-no-repeat absolute top-[43px] left-[36px] z-[184]" />
-</div>
+      <div className="navbar  w-[1290px] self-stretch  overflow-hidden h-[50px] grid md:overflow-hidden md:box-border cursor-pointer  relative z-[185] mt-[28px] mr-0 mb-0 ml-[75px]">
+        <div className="w-[187px] hover:text-green-600 h-[50px] bg-[#e7af38] rounded-[8px] absolute top-0 left-[1103px] z-[74]">
+          <a className="flex h-[30px] justify-start items-start font-['Poppins'] text-[20px] font-semibold leading-[30px] text-[#fff] hover:uppercase absolute top-[10px] left-[48px] text-left whitespace-nowrap z-[75]">
+            Join now
+          </a>
+        </div>
+        <span className="flex h-[36px] justify-start items-start font-['Poppins'] text-[24px] font-semibold leading-[36px] text-[#241e1e] hover:uppercase  absolute top-[7px] left-0 text-left whitespace-nowrap z-[26]">
+          WorkWisely
+        </span>
+        <div className="flex w-[386px] h-[30px] gap-[30px] items-start flex-nowrap absolute top-[10px] left-1/2 translate-x-[-49.87%] translate-y-0 z-[27]">
+          <button className="w-[61px] h-[30px] shrink-0 font-['Poppins'] text-[20px] font-bold leading-[30px] text-[#241e1e] border-none relative whitespace-nowrap z-[28] pointer" />
+          <div className="flex-1 underline hover:uppercase flex flex-col items-start justify-start text-2xl py-0 pr-[5.5px] pl-0">
+            <b className="relative hover:uppercase capitalize inline-block min-w-[61px] home">
+              <a>Home</a>
+            </b>
+          </div>
+          <a
+            id="contact"
+            className="h-[30px] shrink-0 basis-auto hover:uppercase hover:text-[#e7af38] font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-[29]"
+          >
+            Contact
+          </a>
+          <a
+            id="about"
+            className="h-[30px] shrink-0 hover:uppercase hover:text-[#e7af38] basis-auto font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-30"
+          >
+            About Us
+          </a>
+          <a
+            id="signIn"
+            className="h-[30px] shrink-0 basis-auto hover:uppercase hover:text-[#e7af38]  font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-[31]"
+          >
+            Sign In
+          </a>
+        </div>
+        <div className="w-[72px] h-[3px] bg-[url(../assets/images/dbd17d50-b2a8-415c-bc5b-2ee692859aff.png)] bg-cover bg-no-repeat absolute top-[43px] left-[36px] z-[184]" />
+      </div>
 
-      <div className="w-[1290px] h-[511px] relative z-[77] mt-[76px] mr-0 mb-0 ml-[75px]">
+      <div className="content-section w-[1290px] h-[511px] relative z-[77] mt-[76px] mr-0 mb-0 ml-[75px]">
         <div className="w-[167px] h-[56.987px] bg-[#7c7c7c] rounded-[10px] absolute top-0 left-[932px] z-[62]">
           <span className="flex h-[19.996px] justify-start items-start font-['Inter'] text-[15px] font-semibold leading-[19.996px] text-[#fff] tracking-[0.07px] absolute top-[18.996px] left-[46px] text-left whitespace-nowrap z-[63]">
             Unlimited jobs
@@ -68,7 +89,7 @@ export default function Main() {
             </Marquee>
           </div>
         </div>
-        <span className="flex w-[728px] h-[138px] justify-start items-start font-['Poppins'] text-[15px] font-normal leading-[22.5px] text-[#241e1e] absolute top-[168px] left-0 text-left z-[58]">
+        <span className="flex  w-[728px] h-[138px] justify-start items-start font-['Poppins'] text-[15px] font-normal leading-[22.5px] text-[#241e1e] absolute top-[168px] left-0 text-left z-[58]">
           Crafting Your Path to Professional Success.Introducing CareerCrafters,
           an innovative job platform designed to seamlessly connect talent with
           opportunities. With a user-friendly interface and advanced matching
@@ -78,10 +99,84 @@ export default function Main() {
           CareerCrafters. Your next opportunity awaits – join us on the path to
           success!
         </span>
-        <div className="w-[633px] h-[64px] rounded-[9px] border-solid border border-[rgba(153,153,153,0.6)] absolute top-[333px] left-0 z-[25]">
+        <div className="w-[633px] h-[64px] cursor-pointer rounded-[9px] border-solid border border-[rgba(153,153,153,0.6)] absolute top-[333px] left-0 z-[25]">
           <div className="flex w-[56px] h-[56px] cursor-pointer hover: pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[10px] items-start flex-nowrap bg-[#e7af38] rounded-[8px] absolute top-[3px] left-[572px] z-[23]">
             <div className="w-[24px] h-[24px] shrink-0 bg-[url(../assets/images/083b8264-4a39-40bc-a398-6358cae7e239.png)] bg-cover bg-no-repeat relative overflow-hidden z-[24]" />
           </div>
+
+          <div className="relative ">
+            <div
+              onClick={toggleOpen}
+              className=" w-[14px] h-[8px] bg-[url(../assets/images/bbf3ecfd-b724-4e50-a338-19193a1c91c9.png)] bg-cover bg-no-repeat absolute top-[14.382px] left-[87px] z-[13]"
+            />
+            <div
+              className={`dropdown-content absolute top-[30px] left-[80px] bg-white rounded-md shadow-lg p-3 ${
+                isOpen ? "show" : ""
+              }`}
+              >
+              <a
+                href="https://www.prolaxies.com/"
+                class="dropdown-item block py-2 hover:text-blue-400"
+              >
+                Prolaxies
+              </a>
+              <a
+                href="https://brandcurb.com/"
+                class="dropdown-item block py-2 hover:text-blue-400"
+              >
+                Brandcurb
+              </a>
+              <a
+                href="https://themeforest.net/search/software%20company"
+                class="dropdown-item block py-2 hover:text-blue-400"
+                >
+                ThemeSoft
+              </a>
+            </div>
+          </div>
+
+          <div className="relative"> 
+    <div onClick={toggleOpen2} className="trigger-button w-[14px] h-[8px] bg-[url(../assets/images/b640447f-eb9c-4c5a-9da4-4c7581d262aa.png)] bg-cover bg-no-repeat absolute top-[14.382px] left-[348px] z-[17]"> 
+    </div> 
+    <div className={`dropdown-content absolute top-[30px] left-[328px] bg-white rounded-md shadow-lg p-3 ${isOpen2 ? 'show' : ''}`}>  {/* Adjust 'left' position  */}
+      {/* The same links as before */}
+      <a
+                href="https://stackoverflow.com/"
+                class="dropdown-item block py-2 hover:text-blue-400"
+              >
+                Stack Overflow
+              </a>
+              <a
+                href="https://github.com/"
+                class="dropdown-item block py-2 hover:text-blue-400"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://developer.mozilla.org/"
+                class="dropdown-item block hover:text-blue-400 py-2 hover:bg-gray-100"
+                >
+                MDN Web Docs
+              </a>
+    </div>
+  </div>
+
+          {/* <div  className="w-[14px] h-[8px] bg-[url(../assets/images/b640447f-eb9c-4c5a-9da4-4c7581d262aa.png)] bg-cover bg-no-repeat absolute top-[14.382px] left-[348px] z-[17]"/> */}
+         {/* <div  className="w-[14px] h-[8px] bg-[url(../assets/images/601c3f37-e0aa-4bf6-884d-874ce735db8a.png)] bg-cover bg-no-repeat absolute top-[14.382px] left-[509px] z-[21]" /> */}
+
+         <div className="relative"> 
+    <div onClick={toggleOpen3} className="trigger-button w-[14px] h-[8px] bg-[url(../assets/images/601c3f37-e0aa-4bf6-884d-874ce735db8a.png)] bg-cover bg-no-repeat absolute top-[14.382px] left-[509px] z-[21]"> 
+    </div> 
+    <div className={`dropdown-content absolute top-[30px] left-[489px] bg-white  rounded-md shadow-lg p-3 ${isOpen3 ? 'show' : ''}`}>  {/* Adjust 'left' position  */}
+      <a href="https://www.w3schools.com/" className="dropdown-item block py-2 hover:text-blue-400">W3Schools</a>
+      <a href= "https://codepen.io/" className="dropdown-item block py-2 hover:text-blue-400">Codepen</a>
+      <a href="https://dev.to/" className="dropdown-item block py-2 hover:text-blue-400">Dev.to</a>
+    </div>
+  </div>
+
+
+
+
           <span className="flex h-[24px] justify-start items-start font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#231e1e] absolute top-[6px] left-[197px] text-left whitespace-nowrap z-[16]">
             Resume package
           </span>
@@ -91,12 +186,11 @@ export default function Main() {
           <span className="flex h-[24px] justify-start items-start font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#231e1e] absolute top-[6px] left-[13px] text-left whitespace-nowrap z-[12]">
             Job title
           </span>
-          <div className="w-[14px] h-[8px] bg-[url(../assets/images/bbf3ecfd-b724-4e50-a338-19193a1c91c9.png)] bg-cover bg-no-repeat absolute top-[14.382px] left-[87px] z-[13]" />
-          <div className="w-[14px] h-[8px] bg-[url(../assets/images/b640447f-eb9c-4c5a-9da4-4c7581d262aa.png)] bg-cover bg-no-repeat absolute top-[14.382px] left-[348px] z-[17]" />
-          <div className="w-[14px] h-[8px] bg-[url(../assets/images/601c3f37-e0aa-4bf6-884d-874ce735db8a.png)] bg-cover bg-no-repeat absolute top-[14.382px] left-[509px] z-[21]" />
+
           <span className="flex h-[24px] justify-start items-start font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#999999] absolute top-[32px] left-[13px] text-left whitespace-nowrap z-[14]">
             UI/UX designer
           </span>
+
           <span className="flex h-[24px] justify-start items-start font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#999999] absolute top-[32px] left-[197px] text-left whitespace-nowrap z-[18]">
             Free
           </span>
@@ -104,7 +198,7 @@ export default function Main() {
             US
           </span>
         </div>
-        <div className="w-[237px] h-[50px] hover:bg-yellow-900 cursor-pointer  bg-[#e7af38] rounded-[8px] absolute top-[436px] left-0 z-[77]">
+        <div className="w-[237px]  h-[50px] hover:bg-yellow-900 cursor-pointer  bg-[#e7af38] rounded-[8px] absolute top-[436px]  z-[77]">
           <span className="flex h-[30px] justify-start items-start font-['Poppins'] text-[20px] font-semibold leading-[30px] text-[#fff] absolute top-[10px] left-[14px] text-left whitespace-nowrap z-[78]">
             Create CV now
           </span>
@@ -202,7 +296,10 @@ export default function Main() {
         <div className="w-[25.009px] h-[25.009px] bg-[url(../assets/images/408f5feb-25b0-438f-8aca-8e200fa17d19.png)] bg-cover bg-no-repeat rounded-[50%] absolute top-[3.046px] left-[1208px] z-[127]" />
         <div className="w-[1.56%] h-[7.7%] bg-[url(../assets/images/af6feef4-48bc-4f2f-b7da-c447cb496661.png)] bg-[length:100%_100%] bg-no-repeat absolute top-[16.36%] left-[3.02%] z-[191]" />
       </div>
-      <div id="about" className="w-[218px] cursor-pointer hover:bg-yellow-900 h-[50px] bg-[#e7af38] rounded-[8px] relative z-[81] mt-[70px] mr-0 mb-0 ml-[611px]">
+      <div
+        id="about"
+        className="w-[218px] cursor-pointer hover:bg-yellow-900 h-[50px] bg-[#e7af38] rounded-[8px] relative z-[81] mt-[70px] mr-0 mb-0 ml-[611px]"
+      >
         <span className="flex h-[30px] justify-start items-start font-['Poppins'] text-[20px] font-semibold leading-[30px] text-[#fff] absolute top-[10px] left-[14px] text-left whitespace-nowrap z-[82]">
           Explore more
         </span>
@@ -254,8 +351,8 @@ export default function Main() {
         <span className="flex w-[558px] h-[8opx] justify-start items-start font-['Poppins'] text-[17px] font-normal  text-[#484848] absolute top-[180px] left-[calc(50%--103.5px)] text-left z-[178]">
           Browse through diverse listings from top employers, filter by
           industry, location, and expertise, and find the perfect match for your
-          career goals.personalized job recommendations, and
-          user-friendly interface.
+          career goals.personalized job recommendations, and user-friendly
+          interface.
         </span>
         <span className="flex h-[45px] justify-start items-start font-['Poppins'] text-[30px] font-semibold leading-[45px] text-[#241e1e] absolute top-[337px] left-[calc(50%--103.5px)] text-left whitespace-nowrap z-[175]">
           Apply a job you need
@@ -329,8 +426,8 @@ export default function Main() {
         <div className="w-[1167px] h-[224px]  relative pb-14 z-[167] mt-[10px] mr-0 mb-0 ml-[113px] ">
           <span className="flex w-[238px]  h-[224px] justify-start items-start font-['Outfit'] text-[24px] font-normal  mb-20 text-[#fff] relative  top-0 left-[761px] text-left z-[154] ">
             Company
-          <br  />
-          <br  />
+            <br />
+            <br />
             Contact Us
             <br />
             <br />
