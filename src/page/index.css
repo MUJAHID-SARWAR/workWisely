@@ -21,20 +21,69 @@
   
 }
 
+.main-container {
+  grid: auto / 1fr;  /* Ensures full-height by default */
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto; 
+
+  /* Media Queries for Responsive Width */
+ /* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .main-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .main-container {
+    padding: 1rem;
+  }
+}
+
+/* Custom breakpoint for devices between 772px and 900px */
+@media only screen and (min-width: 772px) and (max-width: 900px) {
+  .main-container {
+    width: 90%; /* Adjust as needed */
+    height: auto;
+    padding: 1rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .main-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media only screen and (min-width: 1440px) {
+  .main-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+}
 
 
 * {
   scroll-behavior: smooth;
 }
+ 
 
-/* For screens smaller than 1225px */
-@media screen and (max-width: 1225px) {
-  .main-container {
-    width: 100%;
-  }
-}
-
-/* For screens smaller than 1050px */
 @media screen and (max-width: 1050px) {
   .navbar,
   .content-section {
@@ -42,17 +91,17 @@
   }
 }
 
-/* For screens smaller than 750px */
+
 @media screen and (max-width: 750px) {
   .navbar,
   .content-section {
     width: 100%;
-    margin-left: 0;
+    margin-left: 1px;
     margin-right: 0;
   }
 }
 
-/* For screens smaller than 450px */
+
 @media screen and (max-width: 450px) {
   .navbar,
   .content-section {
@@ -60,11 +109,10 @@
     margin-left: 0;
     margin-right: 0;
   }
-}
+} 
 
 .dropdown-content {
-  display: none; /* Hidden by default */
-  /* Styling for the dropdown: */
+  display: none; 
   
 }
 

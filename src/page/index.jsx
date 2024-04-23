@@ -18,36 +18,39 @@ export default function Main() {
   return (
     <div className="main-container grid w-[1440px] h-[3644px] bg-[#fff] relative md:overflow-hidden md:box-border mx-auto my-0 mq1225:w-full mq1050:w-full mq750:w-full mq450:w-full">
       <div className="navbar  w-[1290px] self-stretch  overflow-hidden h-[50px] grid md:overflow-hidden md:box-border cursor-pointer  relative z-[185] mt-[28px] mr-0 mb-0 ml-[75px]">
-        <div className="w-[187px] hover:text-green-600 h-[50px] bg-[#e7af38] rounded-[8px] absolute top-0 left-[1103px] z-[74]">
-          <a className="flex h-[30px] justify-start items-start font-['Poppins'] text-[20px] font-semibold leading-[30px] text-[#fff] hover:uppercase absolute top-[10px] left-[48px] text-left whitespace-nowrap z-[75]">
+        <div className="w-[187px]  h-[50px] bg-[#e7af38] rounded-[8px] absolute top-0 left-[1103px] z-[74]">
+          <a className="flex h-[30px] justify-start  items-start font-['Poppins'] text-[20px] font-semibold leading-[30px] text-[#fff]  absolute top-[10px] left-[48px] text-left whitespace-nowrap z-[75]">
             Join now
           </a>
         </div>
-        <span className="flex h-[36px] justify-start items-start font-['Poppins'] text-[24px] font-semibold leading-[36px] text-[#241e1e] hover:uppercase  absolute top-[7px] left-0 text-left whitespace-nowrap z-[26]">
+       
+        <span className="flex h-[36px] hover:text-[#e7af38]  justify-start items-start font-['Poppins'] text-[24px] font-semibold leading-[36px] text-[#241e1e]   absolute top-[7px] left-0 text-left whitespace-nowrap z-[26]">
           WorkWisely
         </span>
+
+        
         <div className="flex w-[386px] h-[30px] gap-[30px] items-start flex-nowrap absolute top-[10px] left-1/2 translate-x-[-49.87%] translate-y-0 z-[27]">
           <button className="w-[61px] h-[30px] shrink-0 font-['Poppins'] text-[20px] font-bold leading-[30px] text-[#241e1e] border-none relative whitespace-nowrap z-[28] pointer" />
-          <div className="flex-1 underline hover:uppercase flex flex-col items-start justify-start text-2xl py-0 pr-[5.5px] pl-0">
-            <b className="relative hover:uppercase capitalize inline-block min-w-[61px] home">
+          <div className="flex-1 underline  flex flex-col items-start justify-start text-2xl py-0 pr-[5.5px] pl-0">
+            <b className="relative hover:text-[#e7af38] inline-block min-w-[61px] home">
               <a>Home</a>
             </b>
           </div>
           <a
             id="contact"
-            className="h-[30px] shrink-0 basis-auto hover:uppercase hover:text-[#e7af38] font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-[29]"
+            className="h-[30px] shrink-0 basis-auto  hover:text-[#e7af38] font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-[29]"
           >
             Contact
           </a>
           <a
             id="about"
-            className="h-[30px] shrink-0 hover:uppercase hover:text-[#e7af38] basis-auto font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-30"
+            className="h-[30px] shrink-0 hover:text-[#e7af38] basis-auto font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-30"
           >
             About Us
           </a>
           <a
             id="signIn"
-            className="h-[30px] shrink-0 basis-auto hover:uppercase hover:text-[#e7af38]  font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-[31]"
+            className="h-[30px] shrink-0 basis-auto  hover:text-[#e7af38]  font-['Poppins'] text-[20px] font-light leading-[30px] text-[#241e1e] relative text-left capitalize whitespace-nowrap z-[31]"
           >
             Sign In
           </a>
@@ -116,19 +119,19 @@ export default function Main() {
               >
               <a
                 href="https://www.prolaxies.com/"
-                class="dropdown-item block py-2 hover:text-blue-400"
+                className="dropdown-item block py-2 hover:text-blue-400"
               >
                 Prolaxies
               </a>
               <a
                 href="https://brandcurb.com/"
-                class="dropdown-item block py-2 hover:text-blue-400"
+                className="dropdown-item block py-2 hover:text-blue-400"
               >
                 Brandcurb
               </a>
               <a
                 href="https://themeforest.net/search/software%20company"
-                class="dropdown-item block py-2 hover:text-blue-400"
+                className="dropdown-item block py-2 hover:text-blue-400"
                 >
                 ThemeSoft
               </a>
@@ -142,19 +145,19 @@ export default function Main() {
       {/* The same links as before */}
       <a
                 href="https://stackoverflow.com/"
-                class="dropdown-item block py-2 hover:text-blue-400"
+                className="dropdown-item block py-2 hover:text-blue-400"
               >
                 Stack Overflow
               </a>
               <a
                 href="https://github.com/"
-                class="dropdown-item block py-2 hover:text-blue-400"
+                className="dropdown-item block py-2 hover:text-blue-400"
               >
                 GitHub
               </a>
               <a
                 href="https://developer.mozilla.org/"
-                class="dropdown-item block hover:text-blue-400 py-2 hover:bg-gray-100"
+                className="dropdown-item block hover:text-blue-400 py-2 hover:bg-gray-100"
                 >
                 MDN Web Docs
               </a>
